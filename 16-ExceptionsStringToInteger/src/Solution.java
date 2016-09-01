@@ -15,8 +15,13 @@ public class Solution {
 		String S = in.next();
 
 		try {
-			int i = Integer.parseInt(S);
+			
+//			int i = Integer.parseInt(S);
+//			System.out.println(S);
+			
+			Integer.parseInt(S);
 			System.out.println(S);
+			
 		} catch (Exception e) {
 			System.out.println("Bad String");
 		}
