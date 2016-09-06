@@ -18,16 +18,16 @@ import java.util.Scanner;
 
 public class Solution {
 
-	public int numDeTrocas;
+	public static int numDeTrocas;
 
-	public int[] ordenaBubbleSort(int[] a) {
+	public static int[] ordenaBubbleSort(int[] a) {
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a.length - 1; j++) {
 				if (a[j] > a[j + 1]) {
 					int aux = a[j];
 					a[j] = a[j + 1];
 					a[j + 1] = aux;
-					this.numDeTrocas++;
+					numDeTrocas++;
 				}
 			}
 			if (numDeTrocas == 0) {
@@ -39,7 +39,6 @@ public class Solution {
 
 	public static void main(String[] args) {
 
-		Solution solution = new Solution();
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int[] vet = new int[n];
@@ -47,9 +46,9 @@ public class Solution {
 			vet[i] = sc.nextInt();
 		}
 
-		int[] vetorOrdenado = solution.ordenaBubbleSort(vet);
+		int[] vetorOrdenado = Solution.ordenaBubbleSort(vet);
 
-		System.out.println("Array is sorted in " + solution.numDeTrocas + " swaps.");
+		System.out.println("Array is sorted in " + numDeTrocas + " swaps.");
 		System.out.println("First Element: " + vetorOrdenado[0]);
 		System.out.println("Last Element: " + vetorOrdenado[n - 1]);
 	}
